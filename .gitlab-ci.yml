@@ -30,10 +30,10 @@ test:
   services:
     - postgres:latest
   variables:
-    POSTGRES_DB: users
+    POSTGRES_DB: user_service
     POSTGRES_USER: runner
     POSTGRES_PASSWORD: ""
-    DATABASE_TEST_URL: postgres://runner@postgres:5432/users
+    DATABASE_TEST_URL: postgres://runner@postgres:5432/user_service
     FLASK_ENV: development
   script:
     - pytest "project/tests" -p no:warnings
